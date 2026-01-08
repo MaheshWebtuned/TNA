@@ -1,0 +1,253 @@
+/* ======= Typography style ======= */
+
+:root {
+  --blue: #0084C1;
+  --gray: #B0ABA7;
+  --white: #FFF;
+  --black: #101010;
+  --light-black: #1B1B1B;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BreadCrumb Section */
+.breadcrumb-box {
+    position: relative;
+    background: url('../img/interior-design-2.jpg') center center / cover no-repeat;
+    width: 100%;
+
+    padding: clamp(4rem, 10vw, 8rem) 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.breadcrumb-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.breadcrumb-content {
+    max-width: 800px;
+}
+
+
+.breadcrumb-content>* {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-content h1 {
+    text-transform: uppercase;
+}
+
+.breadcrumb-content p {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--blue);
+}
+
+.breadcrumb-content p a {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.breadcrumb-content p span {
+    color: var(--white);
+}
+
+
+@media (max-width:945px) {
+    .breadcrumb-content {
+        max-width: 800px;
+        margin-top: 40px;
+    }
+}
+
+/* BreadCrumb Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery Image Section */
+
+.projects-container {
+    transition: opacity 0.4s ease;
+}
+
+.projects-container.fade-out {
+    opacity: 0;
+}
+
+/* Filter Tabs */
+.projects-filter {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects-filter li {
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    color: var(--gray);
+    transition: color 0.3s;
+}
+
+
+.projects-filter li.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--blue);
+    bottom: 0;
+    left: 0;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Image */
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Info Overlay */
+.project-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.7);
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    text-align: center;
+}
+
+/* Slide up on hover */
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+
+/* Text */
+.project-info h5 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.project-info a {
+    font-size: 14px;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.project-info a:hover {
+    color: var(--blue);
+}
+
+
+
+/* Mobile friendly (always visible) */
+@media (max-width: 768px) {
+    .project-info {
+        position: static;
+        transform: translateY(0);
+        background-color: var(--light-black);
+        border-style: none;
+        padding: 5px;
+    }
+}
+
+
+
+/* Animation */
+.project-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-item.hidden {
+    display: none;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .project-card img {
+        height: 180px;
+    }
+}
+
+
+/* Gallery Image Section */

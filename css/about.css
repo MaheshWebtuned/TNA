@@ -1,0 +1,262 @@
+/* ======= Typography style ======= */
+
+:root {
+    --blue: #0084C1;
+    --gray: #B0ABA7;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* BreadCrumb Section */
+.breadcrumb-box {
+    position: relative;
+    background: url('../img/fencing/ALUMINIUMSLATS-PRIVATERESIDENTIAL-1.jpg') center center / cover no-repeat;
+    width: 100%;
+    padding: clamp(4rem, 10vw, 8rem) 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.breadcrumb-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.breadcrumb-content {
+    max-width: 800px;
+}
+
+
+.breadcrumb-content>* {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-content h1 {
+    text-transform: uppercase;
+}
+
+.breadcrumb-content p {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: var(--blue);
+}
+
+.breadcrumb-content p a {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.breadcrumb-content p span {
+    color: var(--white);
+}
+
+
+
+
+@media (max-width:945px) {
+    .breadcrumb-content {
+        max-width: 800px;
+        margin-top: 40px;
+    }
+}
+
+/* BreadCrumb Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT SERVICE SECTION */
+.about-service-list {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px 5px;
+}
+
+.about-service-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 25px;
+}
+
+.service-title {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+.service-link {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.service-link a {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* Hover effects */
+.about-service-list:hover img {
+    transform: scale(1.08);
+}
+
+.about-service-list:hover .service-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ABOUT SERVICE SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= WHY CHOOSE US SECTION ================= */
+.service-process-step {
+    padding: 20px;
+}
+
+
+.service-process-step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+
+
+
+.service-process-step-icon {
+    padding: 10px;
+    width: 80px;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--light-black);
+    text-align: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-process-step img {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+}
+
+.service-process-step h5 {
+    text-align: center;
+}
+
+.service-process-step p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.botton-link {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.service-process-step-content:hover .service-process-step-icon {
+    background-color: var(--blue);
+}
+
+
+@media (max-width:767px) {
+    .content {
+        text-align: center;
+    }
+}
+
+/* ================= WHY CHOOSE US SECTION ================= */
