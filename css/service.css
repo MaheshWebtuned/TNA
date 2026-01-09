@@ -39,7 +39,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/interior-design-3.jpg') center center / cover no-repeat;
+    background: url('../img/why_us.jpg') center center / cover no-repeat;
     width: 100%;
 
     padding: clamp(4rem, 10vw, 8rem) 1rem;
@@ -227,7 +227,7 @@ body {
 
 /* ================= SERVICE GALLERY SECTION ================= */
 
-.portfolio{
+.portfolio {
     background-color: var(--white);
 }
 
@@ -334,6 +334,7 @@ body {
     align-items: center;
 }
 
+
 .additional-service:hover .additional-service-list {
     background-color: var(--white);
 }
@@ -355,6 +356,7 @@ body {
     width: 55px;
     height: 55px;
 }
+
 
 /* TEXT (your selector was wrong earlier) */
 .additional-service p {
