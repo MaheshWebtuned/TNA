@@ -1,11 +1,11 @@
 /* ======= Typography style ======= */
 
 :root {
-  --blue: #0084C1;
-  --gray: #B0ABA7;
-  --white: #FFF;
-  --black: #101010;
-  --light-black: #1B1B1B;
+    --blue: #0084C1;
+    --gray: #B0ABA7;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
 }
 
 
@@ -89,10 +89,6 @@ body {
     color: var(--white);
 }
 
-.breadcrumb-content p span {
-    color: var(--white);
-}
-
 
 @media (max-width:945px) {
     .breadcrumb-content {
@@ -118,136 +114,131 @@ body {
 
 
 
-/* Gallery Image Section */
 
-.projects-container {
-    transition: opacity 0.4s ease;
+/* ===== GALLERY SECTION STYLING ===== */
+
+
+
+/*  GALLERY GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
 }
 
-.projects-container.fade-out {
-    opacity: 0;
-}
-
-/* Filter Tabs */
-.projects-filter {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.projects-filter li {
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 5px;
-    color: var(--gray);
-    transition: color 0.3s;
-}
-
-
-.projects-filter li.active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: var(--blue);
-    bottom: 0;
-    left: 0;
-}
-
-/* Project Card */
-.project-card {
-    position: relative;
+/* Gallery Items */
+.gallery-item {
     overflow: hidden;
-    background: var(--white);
-    border-radius: 20px;
-    border-style: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.project-card:hover {
-    transform: translateY(-6px);
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Image */
-.project-card img {
+/* Gallery Images */
+.gallery-image {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    display: block;
-}
-
-/* Info Overlay */
-.project-info {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 16px;
-    background: rgba(0, 0, 0, 0.7);
-
-    transform: translateY(100%);
     transition: transform 0.4s ease;
-    text-align: center;
 }
 
-/* Slide up on hover */
-.project-card:hover .project-info {
-    transform: translateY(0);
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
 }
 
-/* Text */
-.project-info h5 {
-    font-size: 16px;
-    margin-bottom: 4px;
-    text-transform: uppercase;
+
+
+
+/* ===== LIGHTBOX STYLING ===== */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 
-.project-info a {
-    font-size: 14px;
-    color: var(--gray);
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
+/* Lightbox Image */
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s ease;
 }
 
-.project-info a:hover {
+/* Close Button */
+.lightbox .close {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox .close:hover {
     color: var(--blue);
 }
 
+/* Arrows */
+.lightbox .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: var(--white);
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
 
+.lightbox .arrow:hover {
+    color: var(--blue);
+}
 
-/* Mobile friendly (always visible) */
+.lightbox .arrow.left {
+    left: 40px;
+}
+
+.lightbox .arrow.right {
+    right: 40px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .project-info {
-        position: static;
-        transform: translateY(0);
-        background-color: var(--light-black);
-        border-style: none;
-        padding: 5px;
+    .lightbox-content {
+        max-width: 90%;
+    }
+
+    .lightbox .arrow {
+        font-size: 40px;
     }
 }
 
-
-
-/* Animation */
-.project-item {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.project-item.hidden {
-    display: none;
-}
-
-
-/* Responsive tweaks */
-@media (max-width: 576px) {
-    .project-card img {
-        height: 180px;
-    }
-}
-
-
-/* Gallery Image Section */
+/* ===== GALLERY SECTION STYLING ===== */

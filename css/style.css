@@ -611,19 +611,6 @@ hr {
   color: #999;
 }
 
-/* vertical line */
-
-.line-vr-section {
-  position: relative;
-  margin: -25px auto;
-  border: 0;
-  border-left: 1px solid;
-  border-color: var(--blue);
-  width: 2px;
-  height: 50px;
-  z-index: 10;
-  opacity: 1;
-}
 
 
 
@@ -652,6 +639,7 @@ hr {
   height: 100%;
   float: left;
   position: absolute;
+  border: 2px solid red;
 
   z-index: 0;
   border-radius: 20px 20px 0 20px;
@@ -1709,7 +1697,6 @@ a.logo {
   color: white;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -1746,7 +1733,6 @@ a.logo {
 .indicator {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1756,7 +1742,6 @@ a.logo {
 .indicator.active {
   background: white;
   width: 40px;
-  border-radius: 10px;
 }
 
 /* Responsive */
@@ -1852,7 +1837,6 @@ a.logo {
 
 .hero-intro-img {
   height: 100%;
-  border-radius: 10px;
 }
 
 .hero-intro-img img {
@@ -1860,8 +1844,7 @@ a.logo {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 10px;
-
+  border-radius: 0px !important;
 }
 
 
@@ -1898,10 +1881,9 @@ a.logo {
 .service-card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
   cursor: pointer;
   aspect-ratio: 9/12;
-  margin: 5px;
+  margin: 10px 0px;
 }
 
 .service-card img {
@@ -1962,10 +1944,10 @@ a.logo {
   color: #fff;
 }
 
-.service-card:hover p,
+.service-card:hover,
 .service-card:hover a {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0px);
 }
 
 .hero-our-service-btn {
@@ -1976,6 +1958,20 @@ a.logo {
 }
 
 
+@media (max-width: 767px) {
+  .service-card {
+    aspect-ratio: 9/9;
+  }
+
+  .service-card a {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  .service-card::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 
 
 /* ======= Our Service SECTION ======= */
@@ -1996,7 +1992,6 @@ a.logo {
 
 .image-panel {
   overflow: hidden;
-  border-radius: 8px;
   aspect-ratio: 9/14;
 }
 
@@ -2066,7 +2061,6 @@ a.logo {
 /* Card styling */
 .wc-card {
   background: transparent;
-  border-radius: 12px;
   padding: 10px 20px;
   text-align: center;
   height: 100%;
@@ -2082,7 +2076,6 @@ a.logo {
 .wc-icon {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   background: #d9e8f7;
   display: flex;
   align-items: center;
@@ -2134,59 +2127,28 @@ a.logo {
 }
 
 .section-header i {
-  font-size: 40px;
+  font-size: clamp(40px, 5vw, 100px);
   color: #d9e8f7;
   display: block;
-  margin-bottom: 16px;
+
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
   color: #1a1a1a;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   letter-spacing: -0.5px;
 }
 
-.carousel-controls {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.carousel-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid var(--black);
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-.carousel-btn:hover {
-  border-color: var(--blue);
-  background: var(--blue);
-  color: var(--white);
-  transform: scale(1.05);
-}
-
-.carousel-btn:active {
-  transform: scale(0.95);
-}
 
 .progress-wrapper {
   flex-grow: 1;
   height: 4px;
   background: #e5e7eb;
-  border-radius: 2px;
   overflow: hidden;
   position: relative;
+  margin-top: 10px;
 }
 
 .progress-fill {
@@ -2199,7 +2161,6 @@ a.logo {
 
 .review-card {
   background: var(--white);
-  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   padding: 40px;
   transition: all 0.3s ease;
@@ -2227,7 +2188,7 @@ a.logo {
 .review-text {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #374151;
+  color: var(--light-black);
   margin-bottom: 32px;
   font-weight: 400;
 }
@@ -2237,13 +2198,12 @@ a.logo {
   align-items: center;
   gap: 16px;
   padding-top: 24px;
-  border-top: 1px solid #f3f4f6;
+  border-top: 2px solid #e5e7eb;
 }
 
 .author-avatar {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   background-color: #e5e7eb;
@@ -2345,9 +2305,41 @@ a.logo {
 
 
 
-/* ======= Button style ======= */
 
-/* button 1 */
+
+/* ======= OVER FOOTER BANNER SECTION ======= */
+
+.over-footer-banner {
+  padding: 30px 0px;
+  background-color: var(--blue);
+}
+
+.over-footer-contain {
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-size: clamp(14px, 2vw, 25px);
+  font-weight: 400;
+  color: var(--white);
+}
+
+/* ======= OVER FOOTER BANNER SECTION ======= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= Button style ======= */
 
 .button-1 {
   display: inline-block;
@@ -2356,19 +2348,18 @@ a.logo {
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-size: 17px;
-  border-radius: 10px;
-  transition: border-color 300ms ease, transform 300ms ease,
-    background-color 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
+  transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
+  transform-style: preserve-3d
 }
 
 [data-overlay-dark] .button-1 span,
 .button-1 span {
   font-size: 15px;
   margin-left: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 [data-overlay-dark] .button-1 i,
@@ -2376,21 +2367,19 @@ a.logo {
   font-style: normal;
   font-size: 17px;
   padding-right: 5px;
-  color: #101010;
+  color: #101010
 }
 
 .button-1:hover {
   border: 1px solid var(--white);
   background-color: var(--white);
-  color: #101010;
-  transform: translate3d(0px, -6px, 0.01px);
+  color: var(--black);
+  transform: translate3d(0, -6px, .01px)
 }
 
 .button-1:hover span {
-  color: #101010;
+  color: var(--black);
 }
-
-/* button 2 */
 
 .button-2 {
   display: inline-block;
@@ -2399,19 +2388,18 @@ a.logo {
   border: 1px solid var(--white);
   background-color: transparent;
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-size: 17px;
-  border-radius: 10px;
-  transition: border-color 300ms ease, transform 300ms ease,
-    background-color 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
+  transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
+  transform-style: preserve-3d
 }
 
 [data-overlay-dark] .button-2 span,
 .button-2 span {
   font-size: 12px;
   margin-left: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 [data-overlay-dark] .button-2 i,
@@ -2419,22 +2407,20 @@ a.logo {
   font-style: normal;
   font-size: 17px;
   padding-right: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 .button-2:hover {
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
-  transform: translate3d(0px, -6px, 0.01px);
+  transform: translate3d(0, -6px, .01px)
 }
 
 .button-2:hover i,
 .button-2:hover span {
-  color: var(--white);
+  color: var(--white)
 }
-
-/* button 3 */
 
 .button-3 {
   display: inline-block;
@@ -2443,33 +2429,30 @@ a.logo {
   border: 1px solid var(--black);
   background-color: var(--black);
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-size: 17px;
-  border-radius: 10px;
-  transition: border-color 300ms ease, transform 300ms ease,
-    background-color 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
+  transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
+  transform-style: preserve-3d
 }
 
 [data-overlay-dark] .button-3 span,
 .button-3 span {
   font-size: 12px;
   margin-left: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 .button-3:hover {
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
-  transform: translate3d(0px, -6px, 0.01px);
+  transform: translate3d(0, -6px, .01px)
 }
 
 .button-3:hover span {
-  color: var(--white);
+  color: var(--white)
 }
-
-/* button 4 */
 
 .button-4 {
   display: inline-block;
@@ -2478,34 +2461,30 @@ a.logo {
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-size: 17px;
-  border-radius: 10px;
-
-  transition: border-color 300ms ease, transform 300ms ease,
-    background-color 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
+  transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
+  transform-style: preserve-3d
 }
 
 [data-overlay-dark] .button-4 span,
 .button-4 span {
   font-size: 15px;
   margin-left: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 .button-4:hover {
   border: 1px solid var(--white);
   background-color: var(--white);
-  color: #101010;
-  transform: translate3d(0px, -6px, 0.01px);
+  color: var(--black);
+  transform: translate3d(0, -6px, .01px)
 }
 
 .button-4:hover span {
-  color: #101010;
+  color: var(--black);
 }
-
-/* button 5 */
 
 .button-5 {
   display: inline-block;
@@ -2515,38 +2494,36 @@ a.logo {
   border-radius: 40px;
   background-color: var(--white);
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-size: 17px;
-  transition: border-color 300ms ease, transform 300ms ease,
-    background-color 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
+  transition: border-color 300ms ease, transform 300ms ease, background-color 300ms ease, color 300ms ease;
+  transform-style: preserve-3d
 }
 
 [data-overlay-dark] .button-5 span,
 .button-5 span {
   font-size: 12px;
   margin-left: 5px;
-  color: var(--white);
+  color: var(--white)
 }
 
 .button-5:hover {
   border: 1px solid var(--blue);
   background-color: var(--blue);
-  color: var(--white);
-  transform: translate3d(0px, -6px, 0.01px);
+  color: var(--black);
+  transform: translate3d(0, -6px, .01px)
 }
 
 .button-5:hover span {
-  color: var(--white);
+  color: var(--black);
 }
-
-/* double button */
 
 .btn-double {
   position: relative;
   text-align: center;
   margin: 10px 0;
-  font-size: 17px;
+  font-size: 17px
 }
 
 .btn-double:before {
@@ -2562,63 +2539,48 @@ a.logo {
   left: 50%;
   top: 16px;
   margin-left: -23px;
-  text-align: center;
+  text-align: center
 }
 
 .btn-double>a+a {
-  margin-left: 0px;
+  margin-left: 0
 }
 
 .btn-double>a {
   display: inline-block;
   font-size: 17px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color .3s ease
 }
 
 .btn-double>a span {
   font-size: 17px;
-  margin-right: 2px;
+  margin-right: 2px
 }
 
 .btn-double>a:nth-of-type(1) {
   background: var(--blue);
   color: var(--white);
   border-radius: 30px 0 0 30px;
-  padding: 15px 27px;
+  padding: 15px 27px
 }
 
 .btn-double>a:nth-of-type(1):hover {
   background: var(--white);
-  color: #101010;
+  color: #101010
 }
 
 .btn-double>a:nth-of-type(2) {
   background: var(--blue);
   color: var(--white);
   border-radius: 0 30px 30px 0;
-  padding: 15px 27px;
+  padding: 15px 27px
 }
 
 .btn-double>a:nth-of-type(2):hover {
   background: var(--white);
-  color: #101010;
+  color: #101010
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2859,9 +2821,8 @@ select {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  border-radius: 100%;
-  font-size: 17px;
-  color: #101010;
+  font-size: 20px;
+  color: var(--white);
   background: var(--blue);
   margin: 5px;
 
@@ -2873,7 +2834,7 @@ select {
 
 .footer .top .social-icons li:hover {
   background: var(--white);
-  color: #101010;
+  color: var(--black);
   -webkit-transition: all 0.7s;
   -o-transition: all 0.7s;
   transition: all 0.7s;

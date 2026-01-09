@@ -444,3 +444,21 @@ resetProgress();
 // Reset progress on slide change
 carousel.addEventListener('slide.bs.carousel', resetProgress);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

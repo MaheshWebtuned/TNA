@@ -77,9 +77,6 @@ body {
     color: var(--white);
 }
 
-.breadcrumb-content p span {
-    color: var(--white);
-}
 
 
 @media (max-width:945px) {
@@ -112,7 +109,6 @@ body {
     display: grid;
     gap: 40px;
     background: var(--light-black);
-    border-radius: 20px;
     padding: 40px;
     align-items: center;
 }
@@ -140,7 +136,7 @@ body {
 }
 
 .contact-form .form-control {
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 12px 14px;
     border: 1px solid #e5e7eb;
     background-color: var(--white);
@@ -166,7 +162,6 @@ body {
     align-items: flex-start;
     background: var(--black);
     padding: 20px;
-    border-radius: 14px;
 }
 
 .info-social {
@@ -176,7 +171,6 @@ body {
     align-items: flex-start;
     background: var(--black);
     padding: 20px;
-    border-radius: 14px;
 }
 
 
@@ -211,7 +205,6 @@ body {
     width: 50px;
     height: 50px;
     padding: 5px;
-    border-radius: 50%;
 
     display: flex;
     justify-content: center;
