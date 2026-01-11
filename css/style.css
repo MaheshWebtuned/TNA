@@ -1681,6 +1681,7 @@ a.logo {
   line-height: 1.6;
   max-width: 800px;
   color: var(--white);
+  text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2084,6 +2085,7 @@ a.logo {
   height: 100%;
   transition: all 0.3s ease;
   border-radius: 10px;
+  border: 1px solid #d9e8f7;
 }
 
 .wc-card:hover {

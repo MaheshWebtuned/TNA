@@ -125,10 +125,30 @@ body {
     text-align: left;
 }
 
+
+
 .service-intro h2 {
     margin-bottom: 20px;
     text-align: left;
 }
+
+.service-intro ul span {
+    font-size: 20px;
+    color: var(--light-black);
+    font-weight: 500;
+}
+
+.service-intro ul li {
+    font-size: 16px;
+    color: var(--light-black);
+}
+
+.service-intro ul li img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
 
 .service-img {
     padding: 20px;
@@ -229,9 +249,13 @@ body {
     background: rgb(142, 192, 235, 0.2);
     color: var(--light-black);
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px 30px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
     height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ================= WHAT WE OFFER SECTION ================= */
@@ -574,25 +598,3 @@ body {
 }
 
 /* ================= WHY CHOOSE US SECTION ================= */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ================= OTHER / ADDITIONAL SERVICE WE PROVIDE ================= */
-
-
-/* ================= OTHER SERVICE WE provide ================= */
