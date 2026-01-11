@@ -133,6 +133,7 @@ body {
 .service-img {
     padding: 20px;
     height: 100%;
+    border-radius: 10px;
 }
 
 .service-img img {
@@ -140,7 +141,7 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-
+    border-radius: 10px;
 }
 
 
@@ -179,7 +180,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
 }
 
 .info-head h2 {
@@ -187,25 +187,23 @@ body {
     margin: 0px;
 }
 
-.info-card ul {
+.info-head ul {
     margin-right: 10px;
     padding: 0px;
 }
 
-.info-card ul li img {
+.info-head ul li img {
     width: 20px;
     margin-right: 10px;
 }
 
 
-.info-card ul li {
+.info-head ul li {
     font: 16px;
     font-weight: 400;
     color: var(--light-black);
     text-transform: uppercase;
 }
-
-
 
 /* ================= Info Cards SECTION ================= */
 
@@ -214,6 +212,73 @@ body {
 
 
 
+
+
+
+
+
+
+
+/* ================= WHAT WE OFFER SECTION ================= */
+
+.what-we-offer h2 {
+    color: var(--black);
+}
+
+.card-box {
+    background: rgb(142, 192, 235, 0.2);
+    color: var(--light-black);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+/* ================= WHAT WE OFFER SECTION ================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= WHAT YOU GET SECTION ================= */
+.what-you-get {
+    background-color: var(--white);
+}
+
+.what-you-get .container h2 {
+    color: var(--black);
+}
+
+.custom-list {
+    padding: 0px;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    color: var(--light-black);
+    margin: 4px 0px;
+}
+
+.custom-list li img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+/* ================= WHAT YOU GET SECTION ================= */
 
 
 
@@ -232,13 +297,13 @@ body {
 }
 
 .service-gallery-1 {
-    padding: 10px 0px;
-
+    border-radius: 10px;
 }
 
 .service-gallery-1 .img {
-    border-bottom-right-radius: 0px !important;
-    border-top-right-radius: 0px !important;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
 }
 
 
@@ -250,6 +315,11 @@ body {
     object-position: center;
     display: block;
     border-radius: inherit;
+}
+
+
+.service-gallery-1:hover img {
+    transform: scale(1.01);
 }
 
 
@@ -283,6 +353,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border-radius: 10px;
 }
 
 .service-container::after {
@@ -349,7 +420,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--white);
+    border: 1px solid rgb(255, 255, 255, 0.2);
 }
 
 .additional-service-list img {

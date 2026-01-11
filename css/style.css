@@ -1883,6 +1883,7 @@ a.logo {
   background-color: var(--white);
 }
 
+
 .service-card {
   position: relative;
   overflow: hidden;
@@ -2081,6 +2082,7 @@ a.logo {
   text-align: center;
   height: 100%;
   transition: all 0.3s ease;
+  border-radius: 10px;
 }
 
 .wc-card:hover {
@@ -2097,11 +2099,12 @@ a.logo {
   align-items: center;
   justify-content: center;
   margin: 0 auto 15px;
+  border-radius: 50px;
 }
 
 .wc-icon img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Text inside card */
@@ -2183,6 +2186,7 @@ a.logo {
   height: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 
@@ -2223,6 +2227,7 @@ a.logo {
   object-fit: cover;
   flex-shrink: 0;
   background-color: #e5e7eb;
+  border-radius: 50px;
 }
 
 .author-info h6 {
@@ -2846,7 +2851,7 @@ select {
   color: var(--white);
   background: var(--blue);
   margin: 5px;
-
+  border-radius: 50px;
 }
 
 .footer .top .social-icons .list-inline {

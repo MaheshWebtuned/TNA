@@ -111,6 +111,7 @@ body {
     background: var(--light-black);
     padding: 40px;
     align-items: center;
+    border-radius: 10px;
 }
 
 /* FORM */
@@ -138,9 +139,9 @@ body {
 .contact-form .form-control {
     border-radius: 0px;
     padding: 12px 14px;
-    border: 1px solid #e5e7eb;
     background-color: var(--white);
     border: none;
+    border-radius: 10px;
 }
 
 
@@ -162,6 +163,7 @@ body {
     align-items: flex-start;
     background: var(--black);
     padding: 20px;
+    border-radius: 10px;
 }
 
 .info-social {
@@ -179,6 +181,7 @@ body {
     font-size: 22px;
     margin-top: 5px;
     color: var(--blue);
+
 }
 
 .info-card h6 {
@@ -211,6 +214,7 @@ body {
     align-items: center;
     background-color: var(--blue);
     transition: all 0.3s ease;
+    border-radius: 50px;
 }
 
 .social-icons-links a {
