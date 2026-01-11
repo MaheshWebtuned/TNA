@@ -1703,11 +1703,13 @@ a.logo {
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  border-radius: 50px;
+
 }
 
 .nav-btn:hover {
-  border: 2px solid rgba(255, 255, 255, 0.3);
   transform: translateY(-50%) scale(1.1);
+  background-color: rgb(0, 146, 206, 0.3);
   color: white;
 }
 
@@ -1737,6 +1739,8 @@ a.logo {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+
 }
 
 .indicator.active {
@@ -1837,6 +1841,7 @@ a.logo {
 
 .hero-intro-img {
   height: 100%;
+  border-radius: 10px;
 }
 
 .hero-intro-img img {
@@ -1844,7 +1849,7 @@ a.logo {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0px !important;
+  border-radius: 10px !important;
 }
 
 
@@ -1884,11 +1889,13 @@ a.logo {
   cursor: pointer;
   aspect-ratio: 9/12;
   margin: 10px 0px;
+  border-radius: 10px;
 }
 
 .service-card img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   object-fit: cover;
   transition: transform 1s ease;
 }
@@ -1973,8 +1980,15 @@ a.logo {
   }
 }
 
-
 /* ======= Our Service SECTION ======= */
+
+
+
+
+
+
+
+
 
 
 
@@ -1993,11 +2007,13 @@ a.logo {
 .image-panel {
   overflow: hidden;
   aspect-ratio: 9/14;
+  border-radius: 10px;
 }
 
 .image-panel img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -2345,6 +2361,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
+  border-radius: 10px;
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
@@ -2385,6 +2402,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
+  border-radius: 10px;
   border: 1px solid var(--white);
   background-color: transparent;
   color: var(--white);
@@ -2426,6 +2444,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
+  border-radius: 10px;
   border: 1px solid var(--black);
   background-color: var(--black);
   color: var(--white);
@@ -2458,6 +2477,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
+  border-radius: 10px;
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
@@ -2490,6 +2510,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
+  border-radius: 10px;
   border: 1px solid var(--white);
   border-radius: 40px;
   background-color: var(--white);
