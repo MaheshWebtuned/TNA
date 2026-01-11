@@ -4,6 +4,7 @@
     --white: #FFF;
     --black: #101010;
     --light-black: #1B1B1B;
+    --bg-white: #FAF7F6;
 }
 
 
@@ -23,6 +24,7 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    background-color: var(--white);
 }
 
 
@@ -108,7 +110,7 @@ body {
 .contact-wrapper {
     display: grid;
     gap: 40px;
-    background: var(--light-black);
+    background: var(--bg-white);
     padding: 40px;
     align-items: center;
     border-radius: 10px;
@@ -119,7 +121,7 @@ body {
 .contact-form h2 {
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--blue);
+    color: var(--black);
 }
 
 .contact-form p {
@@ -161,7 +163,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    background: var(--black);
+    background: #D9E8F7;
     padding: 20px;
     border-radius: 10px;
 }
@@ -171,7 +173,7 @@ body {
     gap: 15px;
     flex-direction: column;
     align-items: flex-start;
-    background: var(--black);
+    background: #D9E8F7;
     padding: 20px;
 }
 
@@ -180,20 +182,22 @@ body {
 .info-card i {
     font-size: 22px;
     margin-top: 5px;
-    color: var(--blue);
+    color: var(--black);
 
 }
 
 .info-card h6 {
     margin: 0;
     font-weight: 600;
+    color: var(--black);
+
 }
 
 .info-card p {
     margin: 5px 0 0;
     font-size: 14px;
     line-height: 1.6;
-    color: var(--white);
+    color: var(--black);
 }
 
 
