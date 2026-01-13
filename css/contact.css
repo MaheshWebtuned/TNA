@@ -114,6 +114,7 @@ body {
     padding: 40px;
     align-items: center;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* FORM */
@@ -125,25 +126,26 @@ body {
 }
 
 .contact-form p {
-    color: #6c757d;
+    color: var(--light-black);
     margin-bottom: 25px;
 }
 
 .contact-form label {
     font-size: 14px;
     font-weight: 500;
+    color: var(--light-black);
 }
 
 .contact-form label span {
     color: var(--blue);
+    color: red;
 }
 
 .contact-form .form-control {
-    border-radius: 0px;
     padding: 12px 14px;
     background-color: var(--white);
-    border: none;
     border-radius: 10px;
+    border: 1px solid #D9E8F7;
 }
 
 
@@ -182,7 +184,7 @@ body {
 .info-card i {
     font-size: 22px;
     margin-top: 5px;
-    color: var(--black);
+    color: var(--blue);
     flex-shrink: 0;
 }
 

@@ -53,12 +53,13 @@
 /* ======= Typography style ======= */
 
 :root {
-  --blue: #0084C1;
+  --blue: #003366;
+  --light-blue: rgba(217, 232, 247, 0.2);
   --gray: #B0ABA7;
   --white: #FFF;
   --black: #101010;
   --light-black: #1B1B1B;
-  --bg-white: #FAF7F6;
+  --bg-white: #F8F8F8;
 }
 
 
@@ -90,7 +91,7 @@ body {
   line-height: 1.95em;
   color: var(--gray);
   overflow-x: hidden !important;
-  background: var(--bg-white);
+  background: var(--white);
   overflow-x: hidden;
 }
 
@@ -657,6 +658,14 @@ hr {
 
 
 
+
+
+
+
+
+
+
+
 /* ======= Preloader style ======= */
 
 .preloader-bg,
@@ -931,13 +940,21 @@ hr {
 
 .section-title {
   font-size: 40px;
-  font-family: "Oswald", sans-serif;
-  color: var(--black);
   position: relative;
   line-height: 1.2em;
   font-weight: 400;
   text-transform: uppercase;
 }
+
+.section-title h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  color: var(--blue);
+  position: relative;
+  line-height: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 
 [data-overlay-dark] .section-title span,
 .section-title span {
@@ -1659,12 +1676,15 @@ a.logo {
   width: 100%;
   max-width: 1200px;
   position: absolute;
+  pointer-events: none;
 }
 
 .content-wrapper.active {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
+
 
 .hero-content h1 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -1710,8 +1730,9 @@ a.logo {
 
 .nav-btn:hover {
   transform: translateY(-50%) scale(1.1);
-  background-color: rgb(0, 146, 206, 0.3);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--blue);
 }
 
 .prev-btn {
@@ -1739,14 +1760,14 @@ a.logo {
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 50px;
 
 }
 
 .indicator.active {
   background: white;
-  width: 40px;
+  width: 80px;
 }
 
 /* Responsive */
@@ -1837,12 +1858,26 @@ a.logo {
 
 
 
+
+
+
 /* ======= INTRO SECTION STYLE======= */
+.hero-intro h2 {
+  color: var(--blue);
+  font-size: clamp(30px, 5vw, 45px);
+  line-height: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero-intro p {
+  color: var(--light-black);
+}
 
 
 .hero-intro-img {
   height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .hero-intro-img img {
@@ -1881,83 +1916,70 @@ a.logo {
 /* ======= Our Service SECTION ======= */
 
 .hero-our-service-section {
-  background-color: var(--white);
+  background-color: var(--light-blue);
+  padding: 60px 0;
 }
-
-
 
 .service-card {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 9/12;
   margin: 10px 0px;
-  border-radius: 10px;
+  border-radius: 20px;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service-card img {
+.service-card-img {
+  overflow: hidden;
+}
+
+.service-card-img img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  aspect-ratio: 4/3;
   object-fit: cover;
   transition: transform 1s ease;
 }
 
-/* zoom only the image */
-.service-card:hover img {
-  transform: scale(1.1);
-}
-
-/* overlay effect */
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  transition: background 0.4s ease;
-}
-
-.service-card h3 {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  z-index: 2;
-  font-size: 1.5rem;
-  color: #fff;
-  width: 100%;
+.service-card-info {
+  position: relative;
   text-align: center;
+  padding: 20px 10px;
+  overflow: hidden;
+  background-color: var(--blue);
 }
 
-
-.service-card a {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
-  z-index: 2;
-  text-align: center;
+.service-card-info h3 {
+  font-size: 25px;
   color: var(--white);
+  position: relative;
+  z-index: 2;
+  transition: color 0.6s ease;
+}
+
+.service-card-info p {
+  font-size: 16px;
+  color: var(--white);
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
 
 }
 
-.service-card p {
-  bottom: 60px;
+/* Hover effects */
+.service-card:hover img {
+  transform: scale(1.04);
 }
 
-.service-card a {
-  bottom: 20px;
-  text-decoration: none;
-  color: #fff;
+.service-card:hover .service-card-info::before {
+  width: 1000px;
+  height: 1000px;
 }
 
-.service-card:hover,
-.service-card:hover a {
-  opacity: 1;
-  transform: translateY(0px);
+.service-card:hover .service-card-info h3,
+.service-card:hover .service-card-info p {
+  color: var(--white);
 }
 
 .hero-our-service-btn {
@@ -1967,21 +1989,6 @@ a.logo {
   justify-content: center;
 }
 
-
-@media (max-width: 767px) {
-  .service-card {
-    aspect-ratio: 9/9;
-  }
-
-  .service-card a {
-    opacity: 1;
-    transform: translateY(-10px);
-  }
-
-  .service-card::after {
-    background: rgba(0, 0, 0, 0.5);
-  }
-}
 
 /* ======= Our Service SECTION ======= */
 
@@ -2009,14 +2016,14 @@ a.logo {
 
 .image-panel {
   overflow: hidden;
-  aspect-ratio: 9/14;
-  border-radius: 10px;
+  aspect-ratio: 9/12;
+  border-radius: 20px;
 }
 
 .image-panel img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   object-fit: cover;
   transition: transform 0.8s ease;
 }
@@ -2057,13 +2064,11 @@ a.logo {
 
 /* ======= WHY CHOOSE US SECTION ======= */
 .hero-why-choose-us-section {
-  background-color: var(--white);
+  background-color: var(--blue);
 }
 
 
-
 .wc-title {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 2rem;
   color: #222;
@@ -2079,14 +2084,16 @@ a.logo {
 
 /* Card styling */
 .wc-card {
-  background: transparent;
+  background-color: var(--white);
   padding: 10px 20px;
   text-align: center;
   height: 100%;
   transition: all 0.3s ease;
-  border-radius: 10px;
-  border: 1px solid #d9e8f7;
+  border-radius: 20px;
+  border: none;
 }
+
+
 
 .wc-card:hover {
   transform: translateY(-4px);
@@ -2189,7 +2196,7 @@ a.logo {
   height: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 
@@ -2212,7 +2219,7 @@ a.logo {
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--light-black);
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   font-weight: 400;
 }
 
@@ -2220,7 +2227,7 @@ a.logo {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding-top: 24px;
+  padding-top: 20px;
   border-top: 2px solid #e5e7eb;
 }
 
@@ -2326,6 +2333,140 @@ a.logo {
 
 
 
+/* FAQs Accordian Section */
+
+.faq-section {
+  background-color: var(--light-blue);
+}
+
+
+
+
+.faq-section-title {
+  text-align: center;
+}
+
+
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.faq-question:hover {
+  color: var(--black);
+}
+
+
+.faq-icon {
+  width: 34px;
+  height: 34px;
+  font-size: 20px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  color: var(--light-black);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(135deg);
+}
+
+
+@media (max-width: 992px) {
+
+  .faq-section-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .faq-container {
+    padding: 10px;
+  }
+
+  .faq-section-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .faq-title {
+    padding: 0px 15px;
+  }
+
+  .faq-desc {
+    padding: 0px 15px;
+
+  }
+
+  .faq-title {
+    font-size: 32px;
+  }
+}
+
+/* FAQs Accordian Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2369,7 +2510,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
@@ -2410,10 +2551,10 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
-  border-radius: 10px;
-  border: 1px solid var(--white);
+  border-radius: 50px;
+  border: 2px solid var(--black);
   background-color: transparent;
-  color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   text-align: center;
   font-size: 17px;
@@ -2425,7 +2566,7 @@ a.logo {
 .button-2 span {
   font-size: 12px;
   margin-left: 5px;
-  color: var(--white)
+  color: var(--black)
 }
 
 [data-overlay-dark] .button-2 i,
@@ -2452,7 +2593,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: 1px solid var(--black);
   background-color: var(--black);
   color: var(--white);
@@ -2485,7 +2626,7 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: 1px solid var(--blue);
   background-color: var(--blue);
   color: var(--white);
@@ -2518,11 +2659,11 @@ a.logo {
   display: inline-block;
   height: auto;
   padding: 14px 35px;
-  border-radius: 10px;
-  border: 1px solid var(--white);
+  border-radius: 50px;
+  border: 1px solid var(--blue);
   border-radius: 40px;
   background-color: var(--white);
-  color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   text-align: center;
   font-size: 17px;
@@ -2534,18 +2675,18 @@ a.logo {
 .button-5 span {
   font-size: 12px;
   margin-left: 5px;
-  color: var(--white)
+  color: var(--black)
 }
 
 .button-5:hover {
-  border: 1px solid var(--blue);
-  background-color: var(--blue);
-  color: var(--black);
+  border: 1px solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
   transform: translate3d(0, -6px, .01px)
 }
 
 .button-5:hover span {
-  color: var(--black);
+  color: var(--white);
 }
 
 .btn-double {

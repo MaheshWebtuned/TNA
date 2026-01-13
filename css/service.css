@@ -151,7 +151,6 @@ body {
 
 
 .service-img {
-    padding: 20px;
     height: 100%;
     border-radius: 10px;
 }
@@ -204,7 +203,6 @@ body {
 
 .info-head h2 {
     color: var(--black);
-    margin: 0px;
 }
 
 .info-head ul {
@@ -252,6 +250,7 @@ body {
     padding: 20px 30px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
     height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
     display: flex;
     align-items: center;
@@ -385,7 +384,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     pointer-events: none;
 }
 

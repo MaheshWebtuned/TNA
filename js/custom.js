@@ -42,10 +42,17 @@ $(function () {
         topOffset: -70 // offste (in px) for fixed top navigation
     });
 
+
+
+
     // Preloader
     $("#preloader").fadeOut(500);
     $(".preloader-bg").delay(500).fadeOut(500);
     var wind = $(window);
+
+
+
+
 
     // Navbar scrolling background
     wind.on("scroll", function () {
@@ -425,7 +432,7 @@ const carousel = document.getElementById('reviewCarousel');
 const progressBar = document.getElementById('progressBar');
 
 const bsCarousel = new bootstrap.Carousel(carousel, {
-    interval: 5000,
+    interval: 10000,
     ride: 'carousel'
 });
 
@@ -433,7 +440,7 @@ function resetProgress() {
     progressBar.style.transition = 'none';
     progressBar.style.width = '0%';
     setTimeout(() => {
-        progressBar.style.transition = 'width 5s linear';
+        progressBar.style.transition = 'width 10s linear';
         progressBar.style.width = '100%';
     }, 50);
 }
