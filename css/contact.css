@@ -120,12 +120,6 @@ body {
 
 /* FORM */
 
-.contact-form h2 {
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--blue);
-    text-transform: uppercase;
-}
 
 .contact-form p {
     color: var(--light-black);

@@ -2139,7 +2139,7 @@ a.logo {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color:var(--blue);
+  color: var(--blue);
 }
 
 .wc-card p {
@@ -2198,7 +2198,7 @@ a.logo {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 100%);
+  background: linear-gradient(90deg, #0092CE 0%, #ffd700 100%);
   width: 0%;
   transition: width 5s linear;
   border-radius: 2px;
