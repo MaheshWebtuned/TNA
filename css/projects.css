@@ -1,33 +1,48 @@
 /* ======= Typography style ======= */
 
 :root {
-  --blue: #003366;
-  --light-blue: rgba(217, 232, 247, 0.2);
-  --gray: #B0ABA7;
-  --white: #FFF;
-  --black: #101010;
-  --light-black: #1B1B1B;
-  --bg-white: #F8F8F8;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
+    --gray: #B0ABA7;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
 
 
+
+html,
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    height: 100%;
+    width: 100%;
+}
 
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-    width: 100%;
+    outline: none;
+    list-style: none;
+    word-wrap: break-word;
 }
 
 body {
-    height: 100%;
-    width: 100%;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.95em;
+    color: var(--gray);
+    overflow-x: hidden !important;
+    background: var(--white);
     overflow-x: hidden;
 }
+
 
 
 
@@ -76,6 +91,7 @@ body {
 
 .breadcrumb-content h1 {
     text-transform: uppercase;
+    font-size: clamp(35px, 6vw, 55px);
 }
 
 .breadcrumb-content p {
@@ -124,7 +140,7 @@ body {
 /*  GALLERY GRID */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -135,6 +151,7 @@ body {
     transition: transform 0.4s ease, box-shadow 0.3s ease;
     cursor: pointer;
     border-radius: 10px;
+    width: 100%;
 }
 
 .gallery-item img {

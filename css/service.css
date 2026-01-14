@@ -74,6 +74,7 @@ body {
 
 .breadcrumb-content h1 {
     text-transform: uppercase;
+    font-size: clamp(35px, 6vw, 55px);
 }
 
 .breadcrumb-content p {
@@ -268,6 +269,14 @@ body {
 
 .card-box:hover {
     transform: scale(1.02);
+}
+
+@media (max-width:767px) {
+    .what-we-offer h2 {
+        color: var(--blue);
+        text-align: center;
+    }
+
 }
 
 /* ================= WHAT WE OFFER SECTION ================= */
@@ -508,7 +517,7 @@ body {
     }
 
     .service-cta {
-        padding: 100px 12px;
+        padding: 60px 12px;
     }
 
     .service-container {

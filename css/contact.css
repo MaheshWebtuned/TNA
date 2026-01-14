@@ -1,11 +1,11 @@
 :root {
-  --blue: #003366;
-  --light-blue: rgba(217, 232, 247, 0.2);
-  --gray: #B0ABA7;
-  --white: #FFF;
-  --black: #101010;
-  --light-black: #1B1B1B;
-  --bg-white: #F8F8F8;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
+    --gray: #B0ABA7;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
 
 
@@ -65,6 +65,8 @@ body {
 
 .breadcrumb-content h1 {
     text-transform: uppercase;
+    font-size: clamp(35px, 6vw, 55px);
+
 }
 
 .breadcrumb-content p {
@@ -114,7 +116,7 @@ body {
     background: var(--bg-white);
     padding: 40px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -293,7 +295,7 @@ body {
     .contact-wrapper {
         padding: 20px;
         gap: 20px;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 
     .contact-form h2 {
