@@ -272,9 +272,6 @@ body {
         gap: 25px;
     }
 
-    .contact-form h2 {
-        font-size: 24px;
-    }
 
     .contact-form p {
         font-size: 14px;
@@ -298,9 +295,6 @@ body {
         border-radius: 10px;
     }
 
-    .contact-form h2 {
-        font-size: 22px;
-    }
 
     .contact-form p {
         font-size: 13px;
@@ -359,9 +353,6 @@ body {
         padding: 15px;
     }
 
-    .contact-form h2 {
-        font-size: 20px;
-    }
 
     .info-card .social-icons {
         gap: 10px;
