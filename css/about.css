@@ -1,13 +1,14 @@
 /* ======= Typography style ======= */
 
 :root {
-    --blue: #0084C1;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
     --gray: #B0ABA7;
     --white: #FFF;
     --black: #101010;
     --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
-
 
 
 * {
@@ -76,7 +77,7 @@ body {
 .breadcrumb-content p {
     text-transform: uppercase;
     font-size: 18px;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .breadcrumb-content p a {
@@ -184,7 +185,9 @@ body {
 
 
 
-
+.hero-intro-section {
+    background-color: var(--light-blue);
+}
 
 
 .intro {
@@ -218,9 +221,94 @@ body {
     }
 }
 
-
-
 /* ABOUT SERVICE SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MISSION SERVICE SECTION ================= */
+.mission-section {
+    background: var(--white);
+    padding: 64px 16px;
+}
+
+
+
+/* Cards */
+.mission-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+    padding: 24px;
+    background-color: var(--blue);
+    color: var(--bg-white);
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.mission-card:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+
+.mission-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+
+/* Text */
+.mission-card-title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.mission-card-text {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ================= MISSION SERVICE SECTION ================= */
+
+
+
+
+
+
+
+
+
 
 
 

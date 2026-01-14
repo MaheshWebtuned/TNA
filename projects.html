@@ -203,11 +203,13 @@
 
 
 
-    <!-- Gallery Section  -->
+    <!-- ================= Gallery Section ================= -->
     <section class="projects-section container py-5">
 
         <div class="col-md-12 text-center mb-5">
-            <div class="section-title">Explore Our Projects</div>
+            <div class="section-title">
+                <h2>Explore Our Projects</h2>
+            </div>
         </div>
 
 
@@ -291,6 +293,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
             const lightbox = document.getElementById("lightbox");
             const lightboxImg = document.getElementById("lightbox-img");
             const closeBtn = document.querySelector(".close");
@@ -300,9 +303,13 @@
 
             let currentIndex = 0;
 
-            // Open image in lightbox
+            // ✅ Open image in lightbox (Desktop / Tablet only)
             galleryImages.forEach((img, index) => {
                 img.addEventListener("click", () => {
+
+                    // ❌ Disable lightbox on small screens
+                    if (window.innerWidth < 767) return;
+
                     currentIndex = index;
                     openLightbox(img.src);
                 });
@@ -318,34 +325,76 @@
             }
 
             function showNext() {
+                if (window.innerWidth < 767) return;
+
                 currentIndex = (currentIndex + 1) % galleryImages.length;
                 lightboxImg.src = galleryImages[currentIndex].src;
             }
 
             function showPrev() {
+                if (window.innerWidth < 767) return;
+
                 currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
                 lightboxImg.src = galleryImages[currentIndex].src;
             }
 
-            // Event Listeners
+            // Buttons
             nextBtn.addEventListener("click", showNext);
             prevBtn.addEventListener("click", showPrev);
             closeBtn.addEventListener("click", closeLightbox);
 
+            // Close when clicking outside image
             lightbox.addEventListener("click", (e) => {
                 if (e.target === lightbox) closeLightbox();
             });
 
+            // Keyboard controls (Desktop only)
             document.addEventListener("keydown", (e) => {
+
+                if (window.innerWidth < 767) return;
+
                 if (e.key === "Escape") closeLightbox();
                 if (e.key === "ArrowRight") showNext();
                 if (e.key === "ArrowLeft") showPrev();
             });
-        });
 
+        });
     </script>
 
-    <!-- Gallery Section  -->
+    <!-- ================= Gallery Section ================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= Lets Talk ================= -->
+    <section class="lets-talk">
+        <div class="background bg-img bg-fixed section-padding" data-overlay-dark="6"
+            data-background="img/fencing/fencing.jpg">
+            <div class="container text-center">
+
+                <div class="section-title text-center text-white pb-4 fw-light">
+                    Are you looking for the best steel fabrications & mechanical repairs. TNA Engineering can help.
+                    Request a free
+                    quote for more informationie?
+                </div>
+
+                <a href="contact.html" class="button-4">REQUEST A QUOTE<span class="ti-arrow-top-right"></span></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- ================= Lets Talk ================= -->
+
+
 
 
 

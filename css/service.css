@@ -1,11 +1,13 @@
 /* ======= Typography style ======= */
 
 :root {
-    --blue: #0084C1;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
     --gray: #B0ABA7;
     --white: #FFF;
     --black: #101010;
     --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
 
 
@@ -25,6 +27,7 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    background-color: var(--light-blue);
 }
 
 
@@ -76,7 +79,7 @@ body {
 .breadcrumb-content p {
     text-transform: uppercase;
     font-size: 18px;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .breadcrumb-content p a {
@@ -130,6 +133,7 @@ body {
 .service-intro h2 {
     margin-bottom: 20px;
     text-align: left;
+    color: var(--blue);
 }
 
 .service-intro ul span {
@@ -191,9 +195,6 @@ body {
 
 /* ================= Info Cards SECTION ================= */
 
-.info-section {
-    background-color: var(--white);
-}
 
 .info-section .container .row {
     display: flex;
@@ -202,7 +203,11 @@ body {
 }
 
 .info-head h2 {
-    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
 }
 
 .info-head ul {
@@ -240,21 +245,29 @@ body {
 /* ================= WHAT WE OFFER SECTION ================= */
 
 .what-we-offer h2 {
-    color: var(--black);
+    color: var(--blue);
 }
 
 .card-box {
-    background: rgb(142, 192, 235, 0.2);
-    color: var(--light-black);
-    border-radius: 10px;
+    background: linear-gradient(160deg,
+            #0066cc 0%,
+            #003366 45%,
+            #001225 100%);
+
+
+    color: var(--white);
+    border-radius: 20px;
     padding: 20px 30px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.card-box:hover {
+    transform: scale(1.02);
 }
 
 /* ================= WHAT WE OFFER SECTION ================= */
@@ -275,12 +288,9 @@ body {
 
 
 /* ================= WHAT YOU GET SECTION ================= */
-.what-you-get {
-    background-color: var(--white);
-}
 
 .what-you-get .container h2 {
-    color: var(--black);
+    color: var(--blue);
 }
 
 .custom-list {
@@ -315,19 +325,15 @@ body {
 
 /* ================= SERVICE GALLERY SECTION ================= */
 
-.portfolio {
-    background-color: var(--white);
-}
 
 .service-gallery-1 {
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 20px;
 }
 
 .service-gallery-1 .img {
     object-fit: contain;
     object-position: center;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 
@@ -343,11 +349,13 @@ body {
 
 
 .service-gallery-1:hover img {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 
 /* ================= SERVICE GALLERY SECTION ================= */
+
+
 
 
 
@@ -372,12 +380,12 @@ body {
     padding: 60px;
     overflow: hidden;
 
-    background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("../img/work\ \(5\).jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 .service-container::after {
@@ -448,8 +456,8 @@ body {
 }
 
 .additional-service-list img {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
 }
 
 

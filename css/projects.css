@@ -1,11 +1,13 @@
 /* ======= Typography style ======= */
 
 :root {
-    --blue: #0084C1;
-    --gray: #B0ABA7;
-    --white: #FFF;
-    --black: #101010;
-    --light-black: #1B1B1B;
+  --blue: #003366;
+  --light-blue: rgba(217, 232, 247, 0.2);
+  --gray: #B0ABA7;
+  --white: #FFF;
+  --black: #101010;
+  --light-black: #1B1B1B;
+  --bg-white: #F8F8F8;
 }
 
 
@@ -79,7 +81,7 @@ body {
 .breadcrumb-content p {
     text-transform: uppercase;
     font-size: 18px;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .breadcrumb-content p a {
