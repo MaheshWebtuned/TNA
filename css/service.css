@@ -137,6 +137,10 @@ body {
     color: var(--blue);
 }
 
+.service-intro ul{
+    padding-left: 10px;
+}
+
 .service-intro ul span {
     font-size: 20px;
     color: var(--blue);
