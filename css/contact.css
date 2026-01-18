@@ -1,11 +1,11 @@
 :root {
-  --blue: #003366;
-  --light-blue: rgba(217, 232, 247, 0.2);
-  --gray: #e1d9d2;
-  --white: #FFF;
-  --black: #101010;
-  --light-black: #1B1B1B;
-  --bg-white: #F8F8F8;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
+    --gray: #e1d9d2;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
 
 
@@ -33,7 +33,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/SZDK4295.jpg') center center / cover no-repeat;
+    background: url('../img/16.jpg') center center / cover no-repeat;
     width: 100%;
 
     padding: clamp(4rem, 10vw, 8rem) 1rem;
@@ -49,7 +49,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -163,7 +163,10 @@ body {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    background: #D9E8F7;
+    background: linear-gradient(135deg,
+            #001a33 0%,
+            #003366 60%,
+            #00509e 100%);
     padding: 20px;
     border-radius: 10px;
 }
@@ -173,7 +176,10 @@ body {
     gap: 15px;
     flex-direction: column;
     align-items: flex-start;
-    background: #D9E8F7;
+    background: linear-gradient(135deg,
+            #001a33 0%,
+            #003366 60%,
+            #00509e 100%);
     padding: 20px;
 }
 
@@ -182,14 +188,14 @@ body {
 .info-card i {
     font-size: 22px;
     margin-top: 5px;
-    color: var(--blue);
+    color: var(--white);
     flex-shrink: 0;
 }
 
 .info-card h6 {
     margin: 0;
     font-weight: 600;
-    color: var(--black);
+    color: var(--white);
 
 }
 
@@ -197,7 +203,7 @@ body {
     margin: 5px 0 0;
     font-size: 14px;
     line-height: 1.6;
-    color: var(--black);
+    color: var(--white);
 }
 
 
@@ -216,27 +222,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--blue);
+    background-color: var(--white);
     transition: all 0.3s ease;
     border-radius: 50px;
+
 }
 
 .social-icons-links a {
     text-decoration: none;
+
 }
 
 .social-icons-links a i {
-    color: var(--white);
+    color: var(--blue);
     transition: all 0.3s ease;
 }
 
 .social-icons-links:hover {
-    background-color: var(--white);
+    transform: scale(1.1);
 }
 
-.social-icons-links:hover a i {
-    color: var(--blue);
-}
+.social-icons-links:hover a i {}
 
 
 
@@ -394,5 +400,9 @@ body {
     width: 100%;
 }
 
-
 /* map section */
+
+
+
+
+

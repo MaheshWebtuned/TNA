@@ -7,8 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>TNA Engineering Pty Ltd</title>
 
-    <!-- Favicon (browser tab icon) -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+
+    <!-- PWA -->
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
 
     <!-- Google Fonts: Oswald & Outfit families with multiple weights -->
     <link rel="stylesheet"
@@ -22,6 +37,10 @@
 
     <!-- this Page stylesheet -->
     <link rel="stylesheet" href="css/service.css" />
+
+
+    <!-- animation stylesheet -->
+    <link rel="stylesheet" href="css/animation.css">
 
 
     <!-- Themify Icons (icon font library) -->
@@ -181,13 +200,14 @@
     <section>
         <div class="breadcrumb-box">
             <div class="breadcrumb-content">
-                <h1>fencing</h1>
+                <h1 class="fade-in-up">fencing</h1>
 
-                <p>
+                <p class="fade-in-up">
                     <a href="service.html">Services</a> <span> // </span> Fencing
                 </p>
 
-                <a href="contact.html" class="button-4">request a quote<span class="ti-arrow-top-right"></span></a>
+                <a href="contact.html" class="button-4 fade-in-up">request a quote<span
+                        class="ti-arrow-top-right"></span></a>
 
             </div>
         </div>
@@ -210,7 +230,7 @@
 
             <div class="row g-4 service-sectio-row">
 
-                <div class="col-md-6">
+                <div class="col-md-6 fade-in-left">
                     <div class="service-intro">
                         <div class="section-title">
                             <h2>FENCING</h2>
@@ -238,7 +258,7 @@
                 </div>
 
 
-                <div class="col-md-6">
+                <div class="col-md-6 fade-in-right">
                     <div class="service-img">
                         <img src="img/work (4).jpg" class="img-fluid " alt="After Kitchen">
 
@@ -266,30 +286,28 @@
     <!-- WHAT WE OFFER -->
     <section class="what-we-offer section-padding">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title fade-in-left">
                 <h2>What we Offer</h2>
             </div>
-
-
-            <p>
+            <p class="fade-in-left">
                 We specialise in building new quality fencing with a range of different materials:
             </p>
 
 
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="card-box">Aluminium Fencing</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="card-box">Steel Fencing</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="card-box">Stainless Steel</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 from-scale">
                     <div class="card-box">Glass Fencing</div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 from-scale">
                     <div class="card-box">Colour Bond Fencing</div>
                 </div>
             </div>
@@ -311,12 +329,12 @@
     <section class="service-cta section-padding bg-white">
         <div class="container service-container">
             <div class="service-cta-content">
-                <h2>SERVICES WE PROVIDE</h2>
+                <h2 class="fade-in-down">SERVICES WE PROVIDE</h2>
 
                 <div class="row">
 
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="balustrades.html" class="additional-service active">
                             <div class="additional-service-list">
                                 <img src="img/icon/line.png" alt="">
@@ -325,7 +343,7 @@
                         </a>
                     </div>
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="frameless-glass-balustrades.html" class="additional-service">
                             <div class="additional-service-list">
                                 <img src="img/icon/glass.png" alt="">
@@ -335,7 +353,7 @@
                     </div>
 
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="stainless-steel.html" class="additional-service">
                             <div class="additional-service-list">
                                 <img src="img/icon/stainless-steel.png" alt="">
@@ -345,7 +363,7 @@
                     </div>
 
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="design-installation.html" class="additional-service">
                             <div class="additional-service-list">
                                 <img src="img/icon/easy-installation.png" alt="">
@@ -356,7 +374,7 @@
 
 
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="on-site-welding.html" class="additional-service">
                             <div class="additional-service-list">
                                 <img src="img/icon/weld.png" alt="">
@@ -367,7 +385,7 @@
 
 
 
-                    <div class="col-6 xol-md-4 col-lg-2">
+                    <div class="col-6 xol-md-4 col-lg-2 from-scale">
                         <a href="fencing.html" class="additional-service">
                             <div class="additional-service-list">
                                 <img src="img/icon/fence.png" alt="">
@@ -402,7 +420,7 @@
     <section class="portfolio section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center pb-4">
+                <div class="col-md-12 text-center pb-4 fade-in-down">
                     <div class="section-title">
                         <h2>BALUSTRADES Projects</h2>
                     </div>
@@ -411,25 +429,25 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="item service-gallery-1">
                         <div class="img"><img src="img/fencing/9c9551a4-f192-4bac-b6c0-4ef30c568734.jpg" alt="" /></div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="item service-gallery-1">
                         <div class="img"><img src="img/fencing/f73ca941-f945-42e0-9f3a-20f61bdb9a48.jpg" alt="" /></div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 from-scale">
                     <div class="item service-gallery-1">
                         <div class="img"><img src="img/fencing/fencing.jpg" alt="" /></div>
                     </div>
                 </div>
 
-                <div class="extra-btn mt-30">
+                <div class="extra-btn mt-30 fade-in-up">
                     <a href="projects.html" class="button-3">View All Gallery <span
                             class="ti-arrow-top-right"></span></a>
                 </div>
@@ -454,15 +472,16 @@
 
     <!-- ================= Lets Talk ================= -->
     <section class="lets-talk">
-        <div class="background bg-img bg-fixed section-padding" data-overlay-dark="6"
+        <div class="background bg-img bg-fixed section-padding" data-overlay-dark="7"
             data-background="img/balustrade/cce1bd64-32f9-4a0a-a1b2-1e8515ccd4fa.jpg">
             <div class="container text-center">
-                <div class="section-title text-center text-white">
+                <div class="section-title text-center text-white fade-in-up">
                     SERVICE FROM TNA ENGINEERING PTY LTD ARE TRUSTED, RELIABLE AND PROFESSIONAL.
                 </div>
 
 
-                <a href="tel:0450 558 187" class="button-4">Call Us Today<span class="ti-arrow-top-right"></span></a>
+                <a href="tel:0450 558 187" class="button-4 fade-in-up">Call Us Today<span
+                        class="ti-arrow-top-right"></span></a>
             </div>
         </div>
     </section>
@@ -647,6 +666,12 @@
 
     <!-- Custom JavaScript (your site-specific scripts) -->
     <script src="js/custom.js"></script>
+
+
+    <!-- Custom JavaScript  -->
+    <script src="js/animation.js"></script>
+
+
 
 </body>
 

@@ -41,7 +41,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/fencing/ALUMINIUMSLATS-PRIVATERESIDENTIAL-1.jpg') center center / cover no-repeat;
+    background: url('../img/12.jpg') center center / cover no-repeat;
     width: 100%;
     padding: clamp(4rem, 10vw, 8rem) 1rem;
 
@@ -56,7 +56,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 

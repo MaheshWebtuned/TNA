@@ -1,13 +1,13 @@
 /* ======= Typography style ======= */
 
 :root {
-  --blue: #003366;
-  --light-blue: rgba(217, 232, 247, 0.2);
-  --gray: #e1d9d2;
-  --white: #FFF;
-  --black: #101010;
-  --light-black: #1B1B1B;
-  --bg-white: #F8F8F8;
+    --blue: #003366;
+    --light-blue: rgba(217, 232, 247, 0.2);
+    --gray: #e1d9d2;
+    --white: #FFF;
+    --black: #101010;
+    --light-black: #1B1B1B;
+    --bg-white: #F8F8F8;
 }
 
 
@@ -42,7 +42,7 @@ body {
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/why_us.jpg') center center / cover no-repeat;
+    background: url('../img/15.jpg') center center / cover no-repeat;
     width: 100%;
 
     padding: clamp(4rem, 10vw, 8rem) 1rem;
@@ -58,7 +58,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -615,3 +615,10 @@ body {
 }
 
 /* ================= WHY CHOOSE US SECTION ================= */
+
+
+
+
+
+
+
